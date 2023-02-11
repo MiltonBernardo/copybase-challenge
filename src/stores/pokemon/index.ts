@@ -5,7 +5,7 @@ axios.defaults.baseURL = "https://pokeapi.co/api/v2/";
 export const usePokemonStore = defineStore("pokemon", {
   state() {
     return {
-      pokemon: {} as any,
+      pokemon: null,
     };
   },
   actions: {
