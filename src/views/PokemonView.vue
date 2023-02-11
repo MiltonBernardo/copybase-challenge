@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import PokemonDetails from "@/components/pages/HomeView/PokemonView/pokemon-details.vue";
+import PokemonDetails from "@/components/pages/homeView/PokemonView/pokemon-details.vue";
 
 export default defineComponent({
   components: {
