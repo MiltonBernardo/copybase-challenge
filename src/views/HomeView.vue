@@ -1,9 +1,34 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <search-bar />
   </main>
 </template>
+<script lang="ts">
+import { defineComponent } from "vue";
+import SearchBar from "@/components/pages/homeView/search-bar.vue";
+
+export default defineComponent({
+  components: {
+    SearchBar,
+  }
+});
+</script>
+<style scoped>
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.start-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+</style>
