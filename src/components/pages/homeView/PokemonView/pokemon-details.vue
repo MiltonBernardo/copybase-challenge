@@ -2,33 +2,33 @@
   <div class="container">
     <div class="pictures">
       <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img :src="pokemon?.sprites?.front_default" alt="" />
+        <img :src="pokemon?.sprites?.front_shiny" alt="" />
       </div>
       <div>
-        <img src="" alt="" />
-        <img src="pokemon?.sprites?.back_shiny" alt="" />
+        <img :src="pokemon?.sprites?.back_default" alt="" />
+        <img :src="pokemon?.sprites?.back_shiny" alt="" />
       </div>
     </div>
     <div class="info">
       <div>
         <h2>
           <strong>Nome:</strong>
-          teste
+          {{ pokemon?.name }}
         </h2>
       </div>
       <div>
         <h4>
           <strong>Altura:</strong>
-          teste
+          {{ pokemon?.height }}
         </h4>
         <h4>
           <strong>Experiência:</strong>
-          teste
+          {{ pokemon?.base_experience }}
         </h4>
         <h4>
           <strong>Peso:</strong>
-         teste
+          {{ pokemon?.weight }}
         </h4>
       </div>
     </div>
@@ -38,6 +38,11 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  props: {
+    pokemon: {
+      type: Object,
+    },
+  },
 });
 </script>
 <style scoped>

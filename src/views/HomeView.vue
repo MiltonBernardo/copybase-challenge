@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <search-bar />
+  <main ref="main">
+    <search-bar @getPokemonbyName="getPokemonByName" />
     <RouterView />
   </main>
 </template>
@@ -13,7 +13,13 @@ export default defineComponent({
   components: {
     SearchBar,
     RouterView,
-  }
+  },
+  methods: {
+    getPokemonByName(name: string): void {
+      let text = name.toLowerCase().replace(" ", "-");
+      this.$router.push(`/${text}`);
+    },
+  },
 });
 </script>
 <style scoped>

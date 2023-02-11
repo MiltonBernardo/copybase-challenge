@@ -1,17 +1,26 @@
 <template>
-  <form class="search">
+  <form @submit.prevent="searchPokemon" class="search">
     <input type="text" placeholder="Pesquisar por Pokemon" v-model="name" />
     <button>Pesquisar</button>
   </form>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
+import { mapActions } from "pinia";
+import { usePokemonStore } from "@/stores/pokemon";
 export default defineComponent({
   data() {
     return {
       name: "",
     };
-  }
+  },
+  methods: {
+    ...mapActions(usePokemonStore, ["searchPokemonByName"]),
+    searchPokemon() {
+      this.searchPokemonByName(this.name);
+      this.$emit("getPokemonbyName", this.name);
+    },
+  },
 });
 </script>
 <style scoped>
