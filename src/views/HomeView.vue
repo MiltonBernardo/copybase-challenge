@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
-import SearchBar from "@/components/pages/HomeView/search-bar.vue";
+import SearchBar from "@/components/pages/homeView/search-bar.vue";
 
 export default defineComponent({
   components: {

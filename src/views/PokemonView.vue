@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import PokemonDetails from "@/components/pages/HomeView/PokemonView/pokemon-details.vue";
+import PokemonDetails from "@/components/pages/homeView/PokemonView/pokemon-details.vue";
 import { mapState, mapActions } from "pinia";
 import { usePokemonStore } from "@/stores/pokemon";
 
