@@ -1,15 +1,18 @@
 <template>
   <main>
     <search-bar />
+    <RouterView />
   </main>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import SearchBar from "@/components/pages/homeView/search-bar.vue";
+import { RouterView } from "vue-router";
+import SearchBar from "@/components/pages/HomeView/search-bar.vue";
 
 export default defineComponent({
   components: {
     SearchBar,
+    RouterView,
   }
 });
 </script>
