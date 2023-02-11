@@ -34,4 +34,7 @@ export default defineComponent({
 section {
   padding: 2rem;
 }
+h3 {
+  color: #101010;
+}
 </style>
